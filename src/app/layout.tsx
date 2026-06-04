@@ -21,8 +21,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  team,
+  analytic
 }: Readonly<{
   children: React.ReactNode;
+  team:React.ReactNode
+  analytic:React.ReactNode
 }>) {
   return (
     <html  
@@ -37,6 +41,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar1></Navbar1>
+          <div className="flex justify-around p-20">
+
+          {team}
+          {analytic}
+          </div>
           {children}
         </ThemeProvider>
       </body>
